@@ -10,6 +10,8 @@ Version control is needed for multiple reasons, such as code changes tracking, c
 - Create a `.gitignore` file to ignore files and directories that don't need to be tracked (e.g. `node_modules`, `dist`, etc.)
 - Push the local repo to a central, remote repository to make it available to all the developers (`GitHub`, `GitLab`, `Bitbucket`, etc). 
 
+Note: I've completed the steps above. 
+
 **2. Setup testing**
 
 Testing is crucial to catch issues early and reduce the number of bugs in a production application. Here are some recommendations: 
