@@ -63,8 +63,7 @@ I've completed the subtasks defined in `caching-fetch-library/cachingFetch.ts`. 
 **1. Run the updated application**:
 
 ```
-git clone https://github.com/jeffrey-almanzar/amex-take-home-assessment.git
-cd amex-take-home-assessment && npm i && npm start
+git clone https://github.com/jeffrey-almanzar/amex-take-home-assessment.git && cd amex-take-home-assessment && npm i && npm start
 ```
 
 **2. Visit the corresponding URLs**:
