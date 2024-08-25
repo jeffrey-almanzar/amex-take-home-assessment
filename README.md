@@ -1,67 +1,59 @@
 ## Task 1 - configure and document the repository
 
-These are 10 essential things that I'd do to get this project production-ready:
+Note that I prioritized and completed `Task 2`.  As part of `Task 1`, I documented the essential things that I'd do to get this project production-ready:
 
-**1. Optimize the project to be stored on a remote Git repository**
+**1. Version control: optimize the project to be stored on a remote Git repository**
 
-Version control is essential in any software development project since it allows tracking changes, collaboration, rollbacks, provides backups, supports code reviews, and more. At the very least, we should:
+Version control is needed for multiple reasons, such as code changes tracking, collaboration, rollbacks, backups, code reviews, and more. At the very least, we should:
 
-- create a new local git repository 
-- create a .gitignore file to ignore files and directories that don't need to be tracked: node_modules, dist, etc.
+- Create a new local git repository 
+- Create a `.gitignore` file to ignore files and directories that don't need to be tracked (e.g. `node_modules`, `dist`, etc.)
+- Push the local repo to a central, remote repository to make it available to all the developers (`GitHub`, `GitLab`, `Bitbucket`, etc). 
 
 **2. Setup testing**
 
-Testing is crucial to reduce the number of bugs in a production application. Here are some recommendations: 
+Testing is crucial to catch issues early and reduce the number of bugs in a production application. Here are some recommendations: 
 
-- Jest: for unit and integration testing.
-- Enzyme: For testing React components.
-- Cypress.io: For testing the application in a real browser environment.
+- Use Jest for unit and integration testing.
+- Use Enzyme for testing React components.
+- Use Cypress.io for end-to-end testing and testing the application in a real browser environment.
 
 **3. Ensure code quality and consistency**
 
-- ESLint: Set up ESLint with appropriate rules to catch errors and enforce coding standards.
-- Prettier: Integrated for code formatting to maintain a consistent style across the codebase.
-- Husky & lint-staged: Git hooks to enforce linting and formatting before commits, ensuring code quality is maintained.
+- Setup ESLint with appropriate rules to catch errors and enforce coding standards.
+- Integrate ESLint and Prettier for code formatting to maintain a consistent style across the codebase.
+- Use Husky and lint-staged for Git hooks to enforce linting and formatting before commits, ensuring code quality is maintained.
 
 **4. Security**
 
-- Environment Variables: use `dotenv` to manage environment variables. This ensures sensitive information (e.g., API keys) is not hardcoded in the source code
-- Sanitization and Validation: ensure that any user input is properly sanitized and validated to prevent XSS or injection attacks.
-- Content Security Policy (CSP): implement CSP headers to protect against cross-site scripting attacks.
+- Use `dotenv` to manage environment variables. This ensures sensitive information (e.g., API keys) is not hardcoded in the source code
+- Ensure that any user input is properly sanitized and validated to prevent XSS or injection attacks.
+- Implement Content Security Policy (CSP) headers to protect against cross-site scripting attacks.
 
 **5. Continuous Integration and Deployment (CI/CD)**
 
-- CI Setup: for automated testing, linting, and building the project on each commit. Examples: `GitLab CI/CD`, `GitHub Actions`, etc.
-- CD Pipeline: automated deployment to environments on successful builds. (e.g., Netlify, Vercel, AWS)
+Setup CI/CD for faster development cycles, higher consistency, and improved reliability:
+
+- CI Setup for automated testing, linting, and building the project on each commit. (e.g. `GitLab CI/CD`, `GitHub Actions`)
+- CD Pipeline for automated deployment to specific environments on successful builds. (e.g. `Netlify`, `Vercel`, `AWS`)
 
 **6. Performance Optimization**
 
-- Profile the application using Google Lighthouse or a similar tool to get some insights about the current performance of the app. Based on the findings, these are a few things to consider:
+Profile the application using Google Lighthouse or a similar tool to get some insights about the current performance of the app. Based on the findings, consider:
    - Code Splitting: use dynamic imports and React’s lazy loading to split code and reduce initial load times.
    - Memoization: use React.memo, useMemo, and useCallback to prevent unnecessary re-renders and optimize performance.
    - Service Workers: to enable Progressive Web App (PWA) features, allowing the app to work offline and load faster.
 
 **7. Accessibility**
 
-- Accessibility Audits: use tools like Axe or Lighthouse to ensure that the application meets accessibility standards (e.g., WCAG).
-- Semantic HTML and ARIA: ensure the application uses semantic HTML elements and appropriate ARIA attributes.
+The ADA requires that businesses open to the public provide full and equal enjoyment of their goods to people with disabilities. Therefore, we need to meet WCAG standards.  
 
-**8. Monitoring and Error Handling**
+- Run an accessibility audit using a tool like Axe or Lighthouse.
+- Make sure to use semantic HTML and fix the errors found in the audit report.
 
-- Error Boundaries: implement React error boundaries to catch and display fallback UI for component errors.
-- Logging and Monitoring: use tools like Sentry or LogRocket to track and log errors and performance metrics in production.
-
-**9. Documentation**
+**8. Documentation**
 
 I'd document the top level file structure, how to run the application, among other things to make sure that a new developer can get up to speed quickly.  
-
-**10. SEO Optimization**
-
-I'd do SEO optimization for key pages (like the homepage), to increase the chance that new users find the site when searching for certain keywords. Here are some recomendations:
-
-- Meta Tags: Properly set meta tags for SEO, social sharing (Open Graph), and analytics.
-- Sitemap and Robots.txt: Include a sitemap.xml and robots.txt file for better search engine indexing.
-
 
 
 ## Task 2 - complete the caching fetch library
